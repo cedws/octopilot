@@ -21,7 +21,7 @@ archives:
 dockers_v2:
   - dockerfile: Dockerfile.goreleaser
     images:
-      - "ghcr.io/dailymotion-oss/{{.ProjectName}}"
+      - 'ghcr.io/{{ envOrDefault "GITHUB_REPOSITORY_OWNER" "dailymotion-oss" }}/{{.ProjectName}}'
     tags:
       - "{{ .Version }}"
       - "{{ .Tag }}"

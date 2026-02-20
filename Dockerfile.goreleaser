@@ -1,4 +1,4 @@
-FROM scratch
+FROM cgr.dev/chainguard/static:latest
 ARG TARGETPLATFORM
-ENTRYPOINT ["/octopilot"]
-COPY $TARGETPLATFORM/octopilot /
+COPY $TARGETPLATFORM/octopilot /usr/local/bin/octopilot
+ENTRYPOINT ["/usr/local/bin/octopilot"]
